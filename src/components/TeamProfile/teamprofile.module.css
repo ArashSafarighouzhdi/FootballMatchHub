@@ -47,16 +47,19 @@
 .headerText {
   z-index: 1;
 }
+
 .headerText h1 {
   font-size: 2.2rem;
   margin-bottom: 8px;
   font-weight: 800;
 }
+
 .tla {
   font-size: 1.2rem;
   color: var(--text-secondary);
   margin-left: 10px;
 }
+
 .headerText p {
   color: var(--text-secondary);
   line-height: 1.6;
@@ -161,10 +164,6 @@
 
   .headerText p strong {
     display: inline;
-  }
-
-  .headerText p::text {
-    content: none;
   }
 
   .card {
