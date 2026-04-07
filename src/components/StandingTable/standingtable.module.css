@@ -1,0 +1,179 @@
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  max-width: 100%;
+  padding: 0 5px;
+}
+
+.backBtn {
+  background-color: var(--bg-card);
+  border: 2.5px solid color-mix(in srgb, var(--border), transparent 78%);
+  color: var(--text-muted);
+  font-family: "Inter", sans-serif;
+  font-weight: bolder;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.backBtn:hover {
+  color: var(--accent-light);
+}
+
+.seasonInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.matchday {
+  background: var(--bg-items);
+  color: var(--text-primary);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.yearText {
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: bolder;
+}
+
+.tableContainer {
+  background-color: var(--bg-card);
+  border-radius: 16px;
+  padding: 1rem;
+  border: 1px solid color-mix(in srgb, var(--border), transparent 78%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.table th {
+  text-align: center;
+  padding: 12px 8px;
+  color: var(--info);
+  font-weight: bolder;
+  border-bottom: 2px solid color-mix(in srgb, var(--border), transparent 78%);
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.teamCol,
+.teamCell {
+  text-align: left !important;
+  padding-left: 15px !important;
+}
+
+.row {
+  border-bottom: 1px solid color-mix(in srgb, var(--border), transparent 78%);
+}
+
+.row:hover {
+  background: var(--bg-secondary);
+}
+
+.table td {
+  padding: 12px 8px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.teamInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.crest {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.1));
+}
+
+.teamName {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.position {
+  font-weight: 600;
+  color: var(--text-primary);
+  width: 40px;
+}
+
+.points {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.gd {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.row:nth-child(-n + 3) {
+  border-left: 3px solid var(--bg-items);
+}
+
+.row:nth-last-child(-n + 3) {
+  border-left: 3px solid var(--danger);
+}
+
+@media screen and (max-width: 768px) {
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .backBtn {
+    margin-bottom: 8px;
+  }
+
+  .table th,
+  .table td {
+    padding: 10px 4px;
+    font-size: 0.85rem;
+  }
+
+  .hideMobile {
+    display: none;
+  }
+
+  .teamCell {
+    min-width: 120px;
+  }
+
+  .teamName {
+    font-size: 0.8rem;
+    max-width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .crest {
+    width: 22px;
+    height: 22px;
+  }
+
+  .points {
+    color: var(--bg-items);
+  }
+}

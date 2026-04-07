@@ -1,0 +1,100 @@
+.card {
+  background-color: var(--bg-card);
+  width: 100%;
+  padding: 24px 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border: 1px solid color-mix(in srgb, var(--border), transparent 78%);
+  cursor: pointer;
+}
+
+.starButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--text-muted);
+  z-index: 10;
+  outline: none;
+}
+
+.activeStar {
+  color: var(--bg-items);
+  text-shadow: 0 0 10px var(--accent);
+  transform: scale(1.1);
+}
+
+.starButton:hover {
+  transform: scale(1.2);
+  color: var(--accent-light);
+}
+
+.flag {
+  width: 100px;
+  height: 65px;
+  position: relative;
+  margin-bottom: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+}
+
+.crest {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 3px;
+}
+
+.flagOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(0, 0, 0, 0.25) 30%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(0, 0, 0, 0.3) 70%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  pointer-events: none;
+}
+
+.name {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    padding: 16px 10px;
+  }
+
+  .flag {
+    width: 60px;
+    height: 40px;
+  }
+
+  .name {
+    font-size: 0.85rem;
+  }
+
+  .starButton {
+    font-size: 18px;
+    top: 4px;
+    right: 4px;
+  }
+}

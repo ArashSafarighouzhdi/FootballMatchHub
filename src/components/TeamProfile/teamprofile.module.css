@@ -1,0 +1,179 @@
+.teamContainer {
+  max-width: 1240px;
+  margin: 0 auto;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+}
+
+.backBtn {
+  background-color: var(--bg-card);
+  border: 2.5px solid color-mix(in srgb, var(--border), transparent 78%);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: bolder;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.backBtn:hover {
+  color: var(--accent-light);
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: var(--bg-card);
+  border-radius: 24px;
+  border: 1px solid color-mix(in srgb, var(--border), transparent 78%);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.flag {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.headerText {
+  z-index: 1;
+}
+.headerText h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+.tla {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-left: 10px;
+}
+.headerText p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.card {
+  background-color: var(--bg-card);
+  border-radius: 20px;
+  border: 1px solid color-mix(in srgb, var(--border), transparent 78%);
+  padding: 32px;
+}
+
+.cardTitle {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  color: var(--info);
+  padding-bottom: 15px;
+}
+
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.squadTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.squadTable th {
+  padding: 16px;
+  color: var(--text-muted);
+  border-bottom: 1.5px solid color-mix(in srgb, var(--border), transparent 85%);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.squadTable td {
+  padding: 16px;
+  border-bottom: 1px solid color-mix(in srgb, var(--border), transparent 78%);
+}
+.playerName {
+  font-weight: 600;
+}
+
+.pos {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.date {
+  font-size: 0.8rem;
+}
+
+.apiWarning {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  border: 1px dashed var(--danger);
+}
+
+.apiWarning p {
+  color: var(--warning);
+  margin-bottom: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.apiWarning a {
+  color: var(--info);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+    gap: 16px;
+  }
+
+  .flag {
+    width: 80px;
+    height: 80px;
+  }
+
+  .headerText h1 {
+    font-size: 1.5rem;
+  }
+
+  .headerText p {
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .headerText p strong {
+    display: inline;
+  }
+
+  .headerText p::text {
+    content: none;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .squadTable th,
+  .squadTable td {
+    padding: 12px 8px;
+    font-size: 0.8rem;
+  }
+}

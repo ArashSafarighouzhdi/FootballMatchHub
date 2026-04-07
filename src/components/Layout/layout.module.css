@@ -1,0 +1,19 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.mainContent {
+  flex: 1;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 32px 24px 56px;
+}
+
+@media screen and (max-width: 768px) {
+  .mainContent {
+    padding: 16px 12px;
+  }
+}

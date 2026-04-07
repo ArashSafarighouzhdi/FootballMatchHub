@@ -1,0 +1,34 @@
+.leaguesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  border-bottom: 1px solid color-mix(in srgb, var(--border), transparent 82%);
+  padding-bottom: 12px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .leaguesContainer {
+    gap: 20px;
+  }
+}

@@ -1,0 +1,45 @@
+.errorContainer {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+}
+
+.errorBox {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  text-align: center;
+}
+
+.errorText {
+  color: var(--text-primary);
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.retryBtn {
+  background: var(--bg-items);
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  color: var(--text-primary);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.retryBtn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.retryBtn:disabled,
+.retryBtnDisabled {
+  color: var(--text-secondary);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  cursor: not-allowed;
+  opacity: 0.7;
+}

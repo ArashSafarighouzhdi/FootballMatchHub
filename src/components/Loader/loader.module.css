@@ -1,0 +1,19 @@
+.overlay {
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+}
+
+.animation {
+  width: 360px;
+  opacity: 0.9;
+  filter: blur(0.5px) drop-shadow(0 0 12px #00f0ff)
+    drop-shadow(0 0 30px rgba(0, 240, 255, 0.4));
+}
+
+.text {
+  color: var(--text-secondary);
+  font-size: 24px;
+  font-weight: bolder;
+  font-family: "Inter", sans-serif;
+}
